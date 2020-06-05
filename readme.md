@@ -23,29 +23,36 @@ ModuleType Version    Name                                ExportedCommands
 Script     3.4.0      Pester                              {Describe, Context, It, Should...}
 
 
-# Result (with coverage)
+# How to Run
 PS D:\PesterCI> Invoke-Pester -CodeCoverage .\PSScripts\Set-Dummy.ps1
 
-
-
-
-
+# Result (with coverage)
 CODE ABOVE FUNCTION
+
 Describing Set-Dummyyyyy
+
 in function set-dummy2
  
  [-] this is meant to fail 776ms
+
    Expected: {}
+
    But was:  {5}
+
    8:         Set-Dummy | Should Be $null
+
    at <ScriptBlock>, D:\PesterCI\PSScripts\Set-Dummy.Tests.ps1: line 8
+
 in function set-dummy2
  
  [+] this is how it should be 295ms
+
 Tests completed in 1.07s
+
 Passed: 1 Failed: 1 Skipped: 0 Pending: 0 Inconclusive: 0
 
 Code coverage report:
+
 Covered 100.00% of 4 analyzed commands in 1 file.
 PS D:\PesterCI>
 
