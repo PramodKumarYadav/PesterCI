@@ -1,4 +1,5 @@
-# This code works with old pester version using powershell 5.1 (so from installed default powershell prompt)
+# What works
+This code works with old pester version using powershell 5.1 (so from installed default powershell prompt)
 
 PS D:\PesterCI> $PSVersionTable
 
@@ -56,7 +57,9 @@ Code coverage report:
 Covered 100.00% of 4 analyzed commands in 1 file.
 PS D:\PesterCI>
 
-#  It did not work with new version of pester and new version of powershell
+# What doesn't work
+
+It did not work with new version of pester and new version of powershell
 PS D:\PesterCI> $psversiontable
 
 
