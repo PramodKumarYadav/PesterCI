@@ -12,9 +12,9 @@ $sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path) -replace '\.Tests\.', '.'
 
 Describe "Get-DoubleOfANumber" { 
     # Mock Set-Dummy { return 1}
-    It "this is meant to fail" {
-        Get-DoubleOfANumber | Should Be $null  
-    }
+    # It "this is meant to fail" {
+    #     Get-DoubleOfANumber | Should Be $null  
+    # }
 
     It "double of 0 is 0" {
         Get-DoubleOfANumber -num 0 | Should Be 0   
