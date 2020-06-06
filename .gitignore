@@ -1,0 +1,3 @@
+# Ignore testresults file that is created when testing locally. 
+# This is needed for AppVeyor not locally.
+TestResults.xml 
