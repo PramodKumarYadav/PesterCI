@@ -19,6 +19,7 @@ build: off
 #   - ps: Invoke-Pester -Path .\PSScripts
 
 # This will run tests and also fail the build if tests fail. 
+# Also added the switch to give code coverage on all files in the directory .\PSScripts\*.ps1
 test_script:
   - ps: |
       $testResultsFile = ".\TestsResults.xml"
@@ -27,3 +28,6 @@ test_script:
       if ($res.FailedCount -gt 0) { 
           throw "$($res.FailedCount) tests failed."
       }
+
+# If you want to test only a particular function, use the switches as given here (for function names and start-end lines):
+# https://pester.dev/docs/usage/code-coverage 

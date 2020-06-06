@@ -1,19 +1,15 @@
-# $here = Split-Path -Parent $MyInvocation.MyCommand.Path
-# $sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path) -replace '\.Tests\.', '.'
-# . "$here\$sut"
-
-# write-host "executes commands"
-
-$modules = Get-ChildItem -Path ".\PSScripts\*.ps1" -Recurse -Force
-foreach($module in $modules){
-    . $module
+# Dot import powershell scripts (ps1 files) to this test script 
+$files = Get-ChildItem -Path ".\PSScripts\*.ps1" -Recurse -Force
+foreach($file in $files) {
+    Write-Host "Importing `$file: $file"
+    . $file  # Dot importing functions
 }
 
 Describe "Get-DoubleOfANumber" { 
-    # Mock Set-Dummy { return 1}
-    # It "this is meant to fail" {
-    #     Get-DoubleOfANumber | Should Be $null  
-    # }
+    Mock Set-Dummy { return 1}
+    It "this is meant to fail" {
+        Get-DoubleOfANumber | Should Be $null  
+    }
 
     It "double of 0 is 0" {
         Get-DoubleOfANumber -num 0 | Should Be 0   
