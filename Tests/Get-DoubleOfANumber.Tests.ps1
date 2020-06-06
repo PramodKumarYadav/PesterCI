@@ -7,8 +7,12 @@ foreach($file in $files) {
 
 Describe "Get-DoubleOfANumber" { 
 
-    It "this is meant to fail" {
-        Get-DoubleOfANumber | Should Be $null  
+    # It "this is meant to fail" {
+    #     Get-DoubleOfANumber | Should Be $null  
+    # }
+
+    It "an integer variable when not passed is zero" {
+        Get-DoubleOfANumber | Should Be 0  
     }
 
     It "double of 0 is 0" {
