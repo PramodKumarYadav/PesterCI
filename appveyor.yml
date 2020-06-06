@@ -1,11 +1,18 @@
+# Reference: https://tjaddison.com/blog/2018/06/adding-pester-tests-to-a-powershell-module-and-scheduling-ci-with-appveyor/
+
+# Skip commits that only involve readme.md file changes. 
 skip_commits:
   files:
     - "**/*.md"
-  
+
+# Install Pester using Chocolatey 
 install:
   - cinst pester
 
+# Dont run any build step (since we have nothing to bulid except running our powershell scripts)
 build: off
+
+# Run Invoke-Pester on the folder containing our tests
 
 # This will run tests but not fail the build if tests fail.
 # test_script:
