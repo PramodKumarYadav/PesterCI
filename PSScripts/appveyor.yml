@@ -8,4 +8,4 @@ skip_commits:
   build: off
   
   test_script:
-    - ps: Invoke-Pester -Path .\tests
+    - ps: Invoke-Pester -Path .
