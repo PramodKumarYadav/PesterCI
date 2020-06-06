@@ -6,7 +6,7 @@ foreach($file in $files) {
 }
 
 Describe "Get-DoubleOfANumber" { 
-    Mock Set-Dummy { return 1}
+
     It "this is meant to fail" {
         Get-DoubleOfANumber | Should Be $null  
     }
