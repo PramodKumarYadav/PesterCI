@@ -1,3 +1,18 @@
+[![Build Status](https://img.shields.io/appveyor/build/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci)
+[![Test Status](https://img.shields.io/appveyor/tests/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci/build/tests)
+
+
+
+# References for Implementing CI using Pester/Github/AppVeyor
+- https://tjaddison.com/blog/2018/06/adding-pester-tests-to-a-powershell-module-and-scheduling-ci-with-appveyor/
+- https://pester.dev/docs/usage/test-results
+- https://pester.dev/docs/quick-start
+
+
+# References for using Shields.io badges (that you see above)
+- https://shields.io/category/build
+
+
 # What works
 This code works with old pester version using powershell 5.1 (so from installed default powershell prompt)
 
