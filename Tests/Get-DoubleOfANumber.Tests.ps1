@@ -1,14 +1,13 @@
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path) -replace '\.Tests\.', '.'
-. "$here\$sut"
+# $here = Split-Path -Parent $MyInvocation.MyCommand.Path
+# $sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path) -replace '\.Tests\.', '.'
+# . "$here\$sut"
 
 # write-host "executes commands"
 
-# $modules = Get-ChildItem -Path ".\*.psm1" -Recurse -Force
-# foreach($module in $modules){
-#     Write-Host "Importing module... $module"
-#     Import-Module $module -Force
-# }
+$modules = Get-ChildItem -Path ".\PSScripts\*.ps1" -Recurse -Force
+foreach($module in $modules){
+    . $module
+}
 
 Describe "Get-DoubleOfANumber" { 
     # Mock Set-Dummy { return 1}
