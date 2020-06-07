@@ -5,6 +5,13 @@ foreach($file in $files) {
     . $file  # Dot importing functions
 }
 
+# Import modules 
+$modules = Get-ChildItem -Path ".\PSScripts\*.psm1" -Recurse -Force
+foreach($module in $modules) {
+    Write-Host "Importing `$module: $module"
+    Import-Module $module -Force
+}
+
 Describe "Get-DoubleOfANumber" { 
 
     # It "this is meant to fail" {
