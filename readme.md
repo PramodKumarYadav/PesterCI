@@ -1,6 +1,26 @@
 [![Build Status](https://img.shields.io/appveyor/build/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci)
 [![Test Status](https://img.shields.io/appveyor/tests/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci/build/tests)
 
+# Check versions (PowerShell and Pester)
+
+## Check powershell version
+PS D:\PesterCI> "$($PSVersionTable.PSVersion)"
+
+5.1.18362.752
+
+## Check pester version
+PS D:\PesterCI> Get-Module Pester -ListAvailable
+
+
+Directory: C:\Program Files\WindowsPowerShell\Modules
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     3.4.0      Pester                              {Describe, Context, It, Should...}
+
+## Note:
+The code samples in here uses older version of Pester (and thus older syntax) with version 5 of powershell. I tried with newer versions of Powershell and Pester but had issues. I may/will migrate eventually to newer versions of both powershell/Pester using latest syntax of pester but for a POC, this suffices. 
+
 # Steps to Run
 - Clone this project on your machine.
 - Make a change in any of the files (except this readme file). 
