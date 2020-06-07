@@ -1,11 +1,40 @@
 [![Build Status](https://img.shields.io/appveyor/build/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci)
 [![Test Status](https://img.shields.io/appveyor/tests/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci/build/tests)
 
-# To test on the local machine (Run this)
+# Steps to Run
+- Clone this project on your machine.
+- Make a change in any of the files (except this readme file). 
+    - This could be adding a new function/module/test or even as simple as adding a space.
+- Add and commit this change.
+- Push to Github (Git push)
+- Now go to the [GitHub page](https://github.com/PramodKumarYadav/PesterCI)
+- Click on any of the badges on the top of this Readme.md file (Build or Test)
+    - This should take you to the appveyor page [say for build](https://ci.appveyor.com/project/PramodKumarYadav/pesterci )
+- If this build points to the latest commit you pushed, you are good. If not, login to appVeyor
+    - https://ci.appveyor.com/project/PramodKumarYadav/pesterci
+    - For me I was not able to login using github on chrome. Edge worked okay.
+- Make a change, commit, push and try again.
+- You should be able to see the latest build and tests status by navigating via badges.
+
+# To replicate this in your project.
+- If you want to replicate the process, the appveyor.yml file in root is the one that does the magic. 
+    - Customize this file for your needs in your project.
+    - Copy the scripts/modules you want to test in one directory.
+    - Copy the tests in another (as shown here).
+    - Invoke your tests from root (as shown in the appveyor.yml) file.
+    - You are good to check results in appveyor.yml.
+        - And yes, you would have to regiester for appveyor (if not done already).
+        - I used github to login/register. Then selected the project where I wanted to run the CI tests.
+    - If stuck, use this very detailed article that I used to setup my project.
+        - https://tjaddison.com/blog/2018/06/adding-pester-tests-to-a-powershell-module-and-scheduling-ci-with-appveyor/
+
+
+# To test Pester on your local machine 
+## Run this
 
 PS D:\PesterCI> Invoke-Pester -OutputFormat NUnitXml -OutputFile .\TestResults.xml -PassThru -CodeCoverage .\PSScripts\*.ps1, .\PSScripts\*.psm1
 
-
+## Results
 
 Describing Get-DoubleOfANumber  
 Testing with $num: 0  
