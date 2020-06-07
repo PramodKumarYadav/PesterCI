@@ -3,7 +3,7 @@
 
 # To test on the local machine (Run this)
 
-PS D:\PesterCI> Invoke-Pester -OutputFormat NUnitXml -OutputFile .\TestResults.xml -PassThru -CodeCoverage .\PSScripts\*.ps1
+PS D:\PesterCI> Invoke-Pester -OutputFormat NUnitXml -OutputFile .\TestResults.xml -PassThru -CodeCoverage .\PSScripts\*.ps1, .\PSScripts\*.psm1
 
 
 
