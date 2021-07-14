@@ -1,5 +1,7 @@
 [![Build Status](https://img.shields.io/appveyor/build/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci)
 [![Test Status](https://img.shields.io/appveyor/tests/PramodKumarYadav/pesterci)](https://ci.appveyor.com/project/PramodKumarYadav/pesterci/build/tests)
+![GitHub contributors](https://img.shields.io/github/contributors/pramodkumaryadav/pesterci)
+![GitHub last commit](https://img.shields.io/github/last-commit/pramodkumaryadav/pesterci)
 
 # Check versions (PowerShell and Pester)
 

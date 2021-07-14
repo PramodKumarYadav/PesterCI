@@ -14,7 +14,7 @@ build: off
 
 # Run Invoke-Pester on the folder containing our tests
 
-# This will run tests but not fail the build if tests fail.
+# This will run tests but not fail the build if tests fail (thus commented). You can use this code when (for some reasons), you want to say merge a code, even when with failing tests.
 # test_script:
 #   - ps: Invoke-Pester -Path .\PSScripts
 
